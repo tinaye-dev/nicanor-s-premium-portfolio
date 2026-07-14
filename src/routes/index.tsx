@@ -564,7 +564,7 @@ function Skills() {
 }
 
 function SkillBar({ name, level }: { name: string; level: number }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLLIElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
   return (
     <li ref={ref}>
