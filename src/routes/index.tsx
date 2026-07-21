@@ -270,9 +270,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="mt-5 max-w-xl text-base font-medium text-foreground/80 sm:text-lg"
           >
-            Python Developer{" "}
-            <span className="text-[color:var(--gold)]">·</span> Django Developer{" "}
-            <span className="text-[color:var(--gold)]">·</span> Product Designer{" "}
+            Product Designer{" "}
             <span className="text-[color:var(--gold)]">·</span> Digital Marketing
             Enthusiast
           </motion.p>
@@ -283,9 +281,10 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            I build modern web applications, user-centered digital products, and
-            digital solutions that solve real-world problems.
+            User-centered digital products and solutions that solve real-world
+            problems.
           </motion.p>
+
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
