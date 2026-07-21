@@ -312,12 +312,12 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="mt-12 grid max-w-lg grid-cols-3 gap-6"
+            className="mt-12 grid max-w-lg grid-cols-2 gap-6"
           >
             {[
               { n: 15, s: "+", l: "Projects" },
-              { n: 3, s: "+", l: "Years learning" },
               { n: 100, s: "%", l: "Dedication" },
+
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-3xl font-bold text-gradient-gold sm:text-4xl">
