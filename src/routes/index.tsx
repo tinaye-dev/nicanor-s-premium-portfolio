@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
 import projForex from "@/assets/project-forex.jpg";
-import projDjango from "@/assets/project-django.jpg";
+
 import projDesign from "@/assets/project-design.jpg";
 import projPortfolio from "@/assets/project-portfolio.jpg";
 import projMarketing from "@/assets/project-marketing.jpg";
@@ -490,17 +490,6 @@ function About() {
 function Skills() {
   const groups = [
     {
-      icon: Code2,
-      title: "Programming",
-      items: [
-        { name: "Python", level: 90 },
-        { name: "Django", level: 82 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 88 },
-        { name: "JavaScript", level: 78 },
-      ],
-    },
-    {
       icon: Palette,
       title: "Design",
       items: [
@@ -525,7 +514,7 @@ function Skills() {
       items: [
         { name: "Git", level: 85 },
         { name: "GitHub", level: 88 },
-        { name: "VS Code", level: 95 },
+        { name: "Figma", level: 90 },
       ],
     },
   ];
@@ -594,14 +583,6 @@ function Projects() {
       desc: "Automated trading strategy engineered in MQL5 with risk management, entry logic, and back-tested performance.",
       tags: ["MQL5", "Automation", "Trading"],
       img: projForex,
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Django Web Application",
-      desc: "Full-stack web app with authentication, database models, admin dashboard, and clean REST endpoints.",
-      tags: ["Django", "Python", "PostgreSQL"],
-      img: projDjango,
       github: "#",
       demo: "#",
     },
@@ -698,7 +679,6 @@ function Projects() {
 
 function Certifications() {
   const certs = [
-    { title: "Python Certificate", org: "Programming Academy", date: "2024" },
     { title: "Product Design Certificate", org: "Design Program", date: "2024" },
     {
       title: "Fundamentals of Digital Marketing",
@@ -763,9 +743,16 @@ function Experience() {
     {
       icon: GraduationCap,
       period: "2023 — Present",
+      title: "Studied at Uncommon.org",
+      org: "Uncommon.org",
+      desc: "Skills-based learning program focused on design, digital, and career readiness.",
+    },
+    {
+      icon: GraduationCap,
+      period: "2023 — Present",
       title: "Self-directed Learning",
-      org: "Python, Django, UI/UX & Digital Marketing",
-      desc: "Continuous, project-based learning across engineering, design, and growth.",
+      org: "UI/UX & Digital Marketing",
+      desc: "Continuous, project-based learning across design and growth.",
     },
     {
       icon: Award,
@@ -784,9 +771,9 @@ function Experience() {
     {
       icon: Briefcase,
       period: "2024 — Present",
-      title: "Freelance Design & Development",
+      title: "Freelance Design Work",
       org: "Independent",
-      desc: "Delivering web apps and product design work for real clients.",
+      desc: "Delivering product and brand design work for real clients.",
     },
   ];
   return (
