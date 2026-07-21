@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
 import projForex from "@/assets/project-forex.jpg";
-import projDjango from "@/assets/project-django.jpg";
+
 import projDesign from "@/assets/project-design.jpg";
 import projPortfolio from "@/assets/project-portfolio.jpg";
 import projMarketing from "@/assets/project-marketing.jpg";
