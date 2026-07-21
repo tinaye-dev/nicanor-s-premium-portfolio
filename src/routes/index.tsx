@@ -871,12 +871,13 @@ function Resume() {
 function Contact() {
   const [sent, setSent] = useState(false);
   const items = [
-    { icon: Mail, label: "Email", value: "nicanor@example.com", href: "mailto:nicanor@example.com" },
-    { icon: Phone, label: "Phone", value: "+000 000 0000", href: "tel:+000" },
+    { icon: Mail, label: "Email", value: "tinayemadziko@gmail.com", href: "mailto:tinayemadziko@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+263 772 731 182", href: "tel:+263772731182" },
     { icon: Linkedin, label: "LinkedIn", value: "/in/nicanormadziko", href: "#" },
     { icon: Github, label: "GitHub", value: "@nicanormadziko", href: "#" },
-    { icon: MessageCircle, label: "WhatsApp", value: "Chat with me", href: "#" },
-    { icon: MapPin, label: "Location", value: "Available worldwide", href: "#" },
+    { icon: MessageCircle, label: "WhatsApp", value: "Chat with me", href: "https://wa.me/263772731182" },
+    { icon: MapPin, label: "Location", value: "Harare, Zimbabwe", href: "#" },
+
   ];
   return (
     <section id="contact" className="relative py-28">
