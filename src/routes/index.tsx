@@ -1025,7 +1025,7 @@ function Footer() {
             {[
               { icon: Github, href: "#", label: "GitHub" },
               { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:nicanor@example.com", label: "Email" },
+              { icon: Mail, href: "mailto:tinayemadziko@gmail.com", label: "Email" },
               { icon: MessageCircle, href: "#", label: "WhatsApp" },
             ].map((s) => (
               <a
