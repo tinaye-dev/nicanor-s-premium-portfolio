@@ -394,31 +394,17 @@ function Hero() {
 function About() {
   const timeline = [
     {
-      year: "2021",
-      title: "Discovered Programming",
-      desc: "Started my journey with Python, drawn to its clarity and power.",
-    },
-    {
-      year: "2022",
-      title: "Web Development",
-      desc: "Learned HTML, CSS, and JavaScript — built my first real websites.",
-    },
-    {
       year: "2023",
-      title: "Django & Product Design",
-      desc: "Deepened backend skills with Django and picked up UI/UX in Figma.",
+      title: "Product Design",
+      desc: "Picked up UI/UX in Figma and started designing thoughtful interfaces.",
     },
     {
       year: "2024",
       title: "Digital Marketing & Automation",
       desc: "Google Digital Marketing certification and Forex trading bot in MQL5.",
     },
-    {
-      year: "2025",
-      title: "Building & Freelancing",
-      desc: "Shipping products that serve real users and real businesses.",
-    },
   ];
+
   return (
     <section id="about" className="relative py-28">
       <div className="mx-auto max-w-6xl px-4">
