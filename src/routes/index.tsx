@@ -497,10 +497,11 @@ function Skills() {
       icon: Wrench,
       title: "Tools",
       items: [
-        { name: "Git", level: 85 },
-        { name: "GitHub", level: 88 },
+        { name: "Canva", level: 92 },
+        { name: "ChatGPT", level: 90 },
         { name: "Figma", level: 90 },
       ],
+
     },
   ];
   return (
