@@ -270,9 +270,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="mt-5 max-w-xl text-base font-medium text-foreground/80 sm:text-lg"
           >
-            Python Developer{" "}
-            <span className="text-[color:var(--gold)]">·</span> Django Developer{" "}
-            <span className="text-[color:var(--gold)]">·</span> Product Designer{" "}
+            Product Designer{" "}
             <span className="text-[color:var(--gold)]">·</span> Digital Marketing
             Enthusiast
           </motion.p>
@@ -283,9 +281,10 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            I build modern web applications, user-centered digital products, and
-            digital solutions that solve real-world problems.
+            User-centered digital products and solutions that solve real-world
+            problems.
           </motion.p>
+
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -313,12 +312,12 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="mt-12 grid max-w-lg grid-cols-3 gap-6"
+            className="mt-12 grid max-w-lg grid-cols-2 gap-6"
           >
             {[
               { n: 15, s: "+", l: "Projects" },
-              { n: 3, s: "+", l: "Years learning" },
               { n: 100, s: "%", l: "Dedication" },
+
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-3xl font-bold text-gradient-gold sm:text-4xl">
@@ -395,31 +394,17 @@ function Hero() {
 function About() {
   const timeline = [
     {
-      year: "2021",
-      title: "Discovered Programming",
-      desc: "Started my journey with Python, drawn to its clarity and power.",
-    },
-    {
-      year: "2022",
-      title: "Web Development",
-      desc: "Learned HTML, CSS, and JavaScript — built my first real websites.",
-    },
-    {
       year: "2023",
-      title: "Django & Product Design",
-      desc: "Deepened backend skills with Django and picked up UI/UX in Figma.",
+      title: "Product Design",
+      desc: "Picked up UI/UX in Figma and started designing thoughtful interfaces.",
     },
     {
       year: "2024",
       title: "Digital Marketing & Automation",
       desc: "Google Digital Marketing certification and Forex trading bot in MQL5.",
     },
-    {
-      year: "2025",
-      title: "Building & Freelancing",
-      desc: "Shipping products that serve real users and real businesses.",
-    },
   ];
+
   return (
     <section id="about" className="relative py-28">
       <div className="mx-auto max-w-6xl px-4">
@@ -512,10 +497,11 @@ function Skills() {
       icon: Wrench,
       title: "Tools",
       items: [
-        { name: "Git", level: 85 },
-        { name: "GitHub", level: 88 },
+        { name: "Canva", level: 92 },
+        { name: "ChatGPT", level: 90 },
         { name: "Figma", level: 90 },
       ],
+
     },
   ];
   return (
@@ -885,12 +871,13 @@ function Resume() {
 function Contact() {
   const [sent, setSent] = useState(false);
   const items = [
-    { icon: Mail, label: "Email", value: "nicanor@example.com", href: "mailto:nicanor@example.com" },
-    { icon: Phone, label: "Phone", value: "+000 000 0000", href: "tel:+000" },
+    { icon: Mail, label: "Email", value: "tinayemadziko@gmail.com", href: "mailto:tinayemadziko@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+263 772 731 182", href: "tel:+263772731182" },
     { icon: Linkedin, label: "LinkedIn", value: "/in/nicanormadziko", href: "#" },
     { icon: Github, label: "GitHub", value: "@nicanormadziko", href: "#" },
-    { icon: MessageCircle, label: "WhatsApp", value: "Chat with me", href: "#" },
-    { icon: MapPin, label: "Location", value: "Available worldwide", href: "#" },
+    { icon: MessageCircle, label: "WhatsApp", value: "Chat with me", href: "https://wa.me/263772731182" },
+    { icon: MapPin, label: "Location", value: "Harare, Zimbabwe", href: "#" },
+
   ];
   return (
     <section id="contact" className="relative py-28">
@@ -1038,7 +1025,7 @@ function Footer() {
             {[
               { icon: Github, href: "#", label: "GitHub" },
               { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:nicanor@example.com", label: "Email" },
+              { icon: Mail, href: "mailto:tinayemadziko@gmail.com", label: "Email" },
               { icon: MessageCircle, href: "#", label: "WhatsApp" },
             ].map((s) => (
               <a
