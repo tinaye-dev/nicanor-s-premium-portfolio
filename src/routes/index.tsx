@@ -710,7 +710,9 @@ function Certifications() {
                     {c.org} · {c.date}
                   </div>
                   <a
-                    href="#"
+                    href={c.href}
+                    target={c.href === "#" ? undefined : "_blank"}
+                    rel={c.href === "#" ? undefined : "noopener noreferrer"}
                     className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-[color:var(--gold)]/30 px-3 py-1.5 text-xs font-semibold text-[color:var(--gold)] transition-colors hover:bg-[color:var(--gold)]/10"
                   >
                     View Certificate <ExternalLink className="h-3 w-3" />
