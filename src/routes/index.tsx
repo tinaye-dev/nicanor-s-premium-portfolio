@@ -1027,7 +1027,7 @@ function Footer() {
           <div className="flex flex-wrap gap-2">
             {[
               { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/nicanor-madziko-5862043b7", label: "LinkedIn" },
               { icon: Mail, href: "mailto:tinayemadziko@gmail.com", label: "Email" },
               { icon: MessageCircle, href: "#", label: "WhatsApp" },
             ].map((s) => (
