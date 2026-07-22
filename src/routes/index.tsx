@@ -300,7 +300,9 @@ function Hero() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#resume"
+              href="https://www.canva.com/design/DAHQFyAq00Q/3I7M7QrHo2BC9Q_wWtLy0w/edit?ui=e30"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/40 bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-[color:var(--gold)]/10"
             >
               <Download className="h-4 w-4" />
@@ -665,13 +667,14 @@ function Projects() {
 
 function Certifications() {
   const certs = [
-    { title: "Product Design Certificate", org: "Design Program", date: "2024" },
+    { title: "Product Design Certificate", org: "Design Program", date: "2024", href: "#" },
     {
-      title: "Fundamentals of Digital Marketing",
-      org: "Google Digital Garage",
+      title: "COURSERA: Digital Marketing SEO, PPC and Social Media",
+      org: "Coursera",
       date: "2024",
+      href: "https://www.coursera.org/account/accomplishments/verify/BK99F9F7OG6L",
     },
-    { title: "Future Certifications", org: "Continuous learner", date: "Ongoing" },
+    { title: "Future Certifications", org: "Continuous learner", date: "Ongoing", href: "#" },
   ];
   return (
     <section id="certifications" className="relative py-28">
@@ -707,7 +710,9 @@ function Certifications() {
                     {c.org} · {c.date}
                   </div>
                   <a
-                    href="#"
+                    href={c.href}
+                    target={c.href === "#" ? undefined : "_blank"}
+                    rel={c.href === "#" ? undefined : "noopener noreferrer"}
                     className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-[color:var(--gold)]/30 px-3 py-1.5 text-xs font-semibold text-[color:var(--gold)] transition-colors hover:bg-[color:var(--gold)]/10"
                   >
                     View Certificate <ExternalLink className="h-3 w-3" />
@@ -845,8 +850,9 @@ function Resume() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#"
-                download
+                href="https://www.canva.com/design/DAHQFyAq00Q/3I7M7QrHo2BC9Q_wWtLy0w/edit?ui=e30"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-semibold text-black shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
               >
                 <Download className="h-4 w-4" />
@@ -873,7 +879,7 @@ function Contact() {
   const items = [
     { icon: Mail, label: "Email", value: "tinayemadziko@gmail.com", href: "mailto:tinayemadziko@gmail.com" },
     { icon: Phone, label: "Phone", value: "+263 772 731 182", href: "tel:+263772731182" },
-    { icon: Linkedin, label: "LinkedIn", value: "/in/nicanormadziko", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", value: "/in/nicanor-madziko", href: "https://www.linkedin.com/in/nicanor-madziko-5862043b7" },
     { icon: Github, label: "GitHub", value: "@nicanormadziko", href: "#" },
     { icon: MessageCircle, label: "WhatsApp", value: "Chat with me", href: "https://wa.me/263772731182" },
     { icon: MapPin, label: "Location", value: "Harare, Zimbabwe", href: "#" },
@@ -1024,7 +1030,7 @@ function Footer() {
           <div className="flex flex-wrap gap-2">
             {[
               { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/nicanor-madziko-5862043b7", label: "LinkedIn" },
               { icon: Mail, href: "mailto:tinayemadziko@gmail.com", label: "Email" },
               { icon: MessageCircle, href: "#", label: "WhatsApp" },
             ].map((s) => (
