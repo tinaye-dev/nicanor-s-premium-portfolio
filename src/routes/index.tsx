@@ -667,13 +667,14 @@ function Projects() {
 
 function Certifications() {
   const certs = [
-    { title: "Product Design Certificate", org: "Design Program", date: "2024" },
+    { title: "Product Design Certificate", org: "Design Program", date: "2024", href: "#" },
     {
-      title: "Fundamentals of Digital Marketing",
-      org: "Google Digital Garage",
+      title: "COURSERA: Digital Marketing SEO, PPC and Social Media",
+      org: "Coursera",
       date: "2024",
+      href: "https://www.coursera.org/account/accomplishments/verify/BK99F9F7OG6L",
     },
-    { title: "Future Certifications", org: "Continuous learner", date: "Ongoing" },
+    { title: "Future Certifications", org: "Continuous learner", date: "Ongoing", href: "#" },
   ];
   return (
     <section id="certifications" className="relative py-28">
