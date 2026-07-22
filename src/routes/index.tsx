@@ -422,11 +422,10 @@ function About() {
                 Hello, I'm <span className="text-gradient-gold">Nicanor</span>.
               </h3>
               <p className="mt-4 text-muted-foreground">
-                I'm a software developer and product designer with a passion for
-                building modern web applications, elegant interfaces, and
-                digital solutions that matter. My work sits at the intersection
-                of engineering, design, and marketing — because great products
-                need all three.
+                I'm a product designer and digital marketer with a passion for
+                elegant interfaces and digital solutions that matter. My work
+                sits at the intersection of design and marketing — because
+                great products need both.
               </p>
               <p className="mt-4 text-muted-foreground">
                 I care deeply about craft, continuous learning, and shipping
