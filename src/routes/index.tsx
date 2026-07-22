@@ -847,8 +847,9 @@ function Resume() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#"
-                download
+                href="https://www.canva.com/design/DAHQFyAq00Q/3I7M7QrHo2BC9Q_wWtLy0w/edit?ui=e30"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-semibold text-black shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
               >
                 <Download className="h-4 w-4" />
