@@ -876,7 +876,7 @@ function Contact() {
   const items = [
     { icon: Mail, label: "Email", value: "tinayemadziko@gmail.com", href: "mailto:tinayemadziko@gmail.com" },
     { icon: Phone, label: "Phone", value: "+263 772 731 182", href: "tel:+263772731182" },
-    { icon: Linkedin, label: "LinkedIn", value: "/in/nicanormadziko", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", value: "/in/nicanor-madziko", href: "https://www.linkedin.com/in/nicanor-madziko-5862043b7" },
     { icon: Github, label: "GitHub", value: "@nicanormadziko", href: "#" },
     { icon: MessageCircle, label: "WhatsApp", value: "Chat with me", href: "https://wa.me/263772731182" },
     { icon: MapPin, label: "Location", value: "Harare, Zimbabwe", href: "#" },
