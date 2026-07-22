@@ -300,7 +300,9 @@ function Hero() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#resume"
+              href="https://www.canva.com/design/DAHQFyAq00Q/3I7M7QrHo2BC9Q_wWtLy0w/edit?ui=e30"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/40 bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-[color:var(--gold)]/10"
             >
               <Download className="h-4 w-4" />
