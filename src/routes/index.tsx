@@ -6,9 +6,7 @@ import {
   ArrowDown,
   ArrowUp,
   Code2,
-  Palette,
   Megaphone,
-  Wrench,
   Github,
   ExternalLink,
   Mail,
@@ -16,7 +14,6 @@ import {
   Linkedin,
   MapPin,
   MessageCircle,
-  Download,
   Award,
   Sparkles,
   Sun,
@@ -24,16 +21,20 @@ import {
   Menu,
   X,
   GraduationCap,
-  Briefcase,
   Rocket,
   ArrowRight,
 } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
-import projForex from "@/assets/project-forex.jpg";
-
-import projDesign from "@/assets/project-design.jpg";
 import projPortfolio from "@/assets/project-portfolio.jpg";
 import projMarketing from "@/assets/project-marketing.jpg";
+import projDesign from "@/assets/project-design.jpg";
+import projDjango from "@/assets/project-django.jpg";
+import projOne from "@/assets/project1.png";
+import projTwo from "@/assets/project2.png";
+import projThree from "@/assets/project3.png";
+import certificateImg from "@/assets/certificate.svg";
+import certificate1 from "@/assets/certificate1.png";
+import certificate2 from "@/assets/certificate2.png";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -48,7 +49,6 @@ const nav = [
   { id: "projects", label: "Projects" },
   { id: "certifications", label: "Certificates" },
   { id: "experience", label: "Experience" },
-  { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -270,9 +270,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="mt-5 max-w-xl text-base font-medium text-foreground/80 sm:text-lg"
           >
-            Product Designer{" "}
-            <span className="text-[color:var(--gold)]">·</span> Digital Marketing
-            Enthusiast
+            Digital Marketing Specialist
           </motion.p>
 
           <motion.p
@@ -281,8 +279,8 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            User-centered digital products and solutions that solve real-world
-            problems.
+            Digital Marketing Specialist focused on creating engaging campaigns,
+            improving online visibility, and helping businesses achieve measurable growth.
           </motion.p>
 
 
@@ -300,12 +298,10 @@ function Hero() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="https://www.canva.com/design/DAHQFyAq00Q/3I7M7QrHo2BC9Q_wWtLy0w/edit?ui=e30"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/40 bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-[color:var(--gold)]/10"
+              href="/cv/Nicanor_Madziko_CV.pdf"
+              download
+              className="inline-flex items-center justify-center rounded-full border border-border/70 bg-transparent px-6 py-3 text-sm font-semibold text-[color:var(--gold)] transition-colors hover:border-[color:var(--gold)]/40 hover:bg-[color:var(--gold)]/10"
             >
-              <Download className="h-4 w-4" />
               Download CV
             </a>
           </motion.div>
@@ -367,7 +363,7 @@ function Hero() {
               </span>
               <div className="text-left">
                 <div className="text-xs text-muted-foreground">Currently</div>
-                <div className="text-sm font-semibold">Django + Design</div>
+                <div className="text-sm font-semibold">Digital Marketing + Growth Strategy</div>
               </div>
             </div>
             <div className="glass absolute -right-4 top-8 flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium">
@@ -396,11 +392,6 @@ function Hero() {
 function About() {
   const timeline = [
     {
-      year: "2023",
-      title: "Product Design",
-      desc: "Picked up UI/UX in Figma and started designing thoughtful interfaces.",
-    },
-    {
       year: "2024",
       title: "Digital Marketing & Automation",
       desc: "Google Digital Marketing certification and Forex trading bot in MQL5.",
@@ -412,8 +403,8 @@ function About() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader
           eyebrow="About me"
-          title="Craft meets curiosity"
-          desc="A developer and designer obsessed with building thoughtful, useful, beautiful things."
+          title="Crafts meets curiosity"
+          desc="A digital marketing specialist obsessed with building thoughtful, useful, beautiful campaigns."
         />
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal>
@@ -422,18 +413,17 @@ function About() {
                 Hello, I'm <span className="text-gradient-gold">Nicanor</span>.
               </h3>
               <p className="mt-4 text-muted-foreground">
-                I'm a product designer and digital marketer with a passion for
-                elegant interfaces and digital solutions that matter. My work
-                sits at the intersection of design and marketing — because
-                great products need both.
+                I'm a Digital Marketing Specialist who helps businesses grow their online
+                presence through content marketing, SEO, social media management, and digital
+                marketing strategies that convert audiences into customers.
               </p>
               <p className="mt-4 text-muted-foreground">
-                I care deeply about craft, continuous learning, and shipping
-                work that feels considered from every angle: fast, accessible,
-                beautiful, and honest.
+                I care deeply about craft, continuous learning, and creating
+                campaigns that feel considered from every angle: strategic, accessible,
+                and results-driven.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3">
-                {["Python", "Django", "Figma", "UI/UX"].map((t) => (
+                {["SEO", "Social Media", "Content Marketing", "Google Ads"].map((t) => (
                   <div
                     key={t}
                     className="rounded-xl border border-border/70 bg-secondary/40 px-3 py-2 text-sm"
@@ -474,62 +464,44 @@ function About() {
 /* ---------- Skills ---------- */
 
 function Skills() {
-  const groups = [
-    {
-      icon: Palette,
-      title: "Design",
-      items: [
-        { name: "Figma", level: 88 },
-        { name: "Canva", level: 92 },
-        { name: "UI/UX Design", level: 85 },
-        { name: "Product Design", level: 80 },
-      ],
-    },
-    {
-      icon: Megaphone,
-      title: "Marketing",
-      items: [
-        { name: "Digital Marketing", level: 82 },
-        { name: "Content Strategy", level: 78 },
-        { name: "Prompt Engineering", level: 88 },
-      ],
-    },
-    {
-      icon: Wrench,
-      title: "Tools",
-      items: [
-        { name: "Canva", level: 92 },
-        { name: "ChatGPT", level: 90 },
-        { name: "Figma", level: 90 },
-      ],
-
-    },
+  const skills = [
+    { name: "Search Engine Optimization (SEO)", level: 90 },
+    { name: "Social Media Marketing", level: 88 },
+    { name: "Content Marketing", level: 85 },
+    { name: "Google Ads", level: 82 },
   ];
   return (
     <section id="skills" className="relative py-28">
       <div className="mx-auto max-w-6xl px-4">
-        <SectionHeader
-          eyebrow="Skills"
-          title="A well-rounded toolkit"
-          desc="Curated skills across engineering, design, and growth."
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-          {groups.map((g, gi) => (
-            <Reveal key={g.title} delay={gi * 0.05}>
-              <div className="glass hover-lift group h-full rounded-3xl p-7">
-                <div className="mb-6 flex items-center gap-3">
-                  <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[color:var(--gold)]/12 text-[color:var(--gold)] transition-colors group-hover:bg-[color:var(--gold)]/20">
-                    <g.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="font-display text-xl font-semibold">
-                    {g.title}
-                  </h3>
+        <div className="mb-14 flex flex-col items-center text-center">
+          <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/30 bg-[color:var(--gold)]/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[color:var(--gold)]">
+            <Sparkles className="h-3 w-3" /> Skills
+          </span>
+          <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+            <span className="text-gradient-gold">A Well-Rounded Marketing Toolkit</span>
+          </h2>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            Core digital marketing skills that help businesses grow, attract customers,
+            and achieve measurable results.
+          </p>
+        </div>
+        <div className="mx-auto max-w-2xl space-y-6">
+          {skills.map((s, i) => (
+            <Reveal key={s.name} delay={i * 0.05}>
+              <div className="glass rounded-2xl p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-display text-lg font-semibold">{s.name}</h3>
+                  <span className="text-sm font-semibold text-[color:var(--gold)]">{s.level}%</span>
                 </div>
-                <ul className="space-y-4">
-                  {g.items.map((s) => (
-                    <SkillBar key={s.name} name={s.name} level={s.level} />
-                  ))}
-                </ul>
+                <div className="h-2 overflow-hidden rounded-full bg-secondary/70">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${s.level}%` }}
+                    transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
+                    className="h-full rounded-full bg-[image:var(--gradient-gold)]"
+                    style={{ boxShadow: "0 0 20px rgba(212,175,55,0.4)" }}
+                  />
+                </div>
               </div>
             </Reveal>
           ))}
@@ -539,63 +511,33 @@ function Skills() {
   );
 }
 
-function SkillBar({ name, level }: { name: string; level: number }) {
-  const ref = useRef<HTMLLIElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
-  return (
-    <li ref={ref}>
-      <div className="mb-1.5 flex items-center justify-between text-sm">
-        <span className="font-medium">{name}</span>
-        <span className="text-xs text-muted-foreground">{level}%</span>
-      </div>
-      <div className="h-2 overflow-hidden rounded-full bg-secondary/70">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : {}}
-          transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
-          className="h-full rounded-full bg-[image:var(--gradient-gold)]"
-          style={{ boxShadow: "0 0 20px rgba(212,175,55,0.4)" }}
-        />
-      </div>
-    </li>
-  );
-}
-
 /* ---------- Projects ---------- */
 
 function Projects() {
   const projects = [
     {
-      title: "Forex Trading Bot",
-      desc: "Automated trading strategy engineered in MQL5 with risk management, entry logic, and back-tested performance.",
-      tags: ["MQL5", "Automation", "Trading"],
-      img: projForex,
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Product Design Case Study",
-      desc: "End-to-end product design in Figma — research, wireframes, high-fidelity UI, and interaction prototypes.",
-      tags: ["Figma", "UI/UX", "Prototyping"],
-      img: projDesign,
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Portfolio Website",
-      desc: "Premium personal portfolio with glassmorphism, motion, and a focused design system.",
-      tags: ["React", "Tailwind", "Motion"],
-      img: projPortfolio,
-      github: "#",
-      demo: "#",
-    },
-    {
       title: "Digital Marketing Campaign",
       desc: "Content strategy, ad creative, and analytics — a growth-focused campaign case study.",
       tags: ["Strategy", "Analytics", "Content"],
-      img: projMarketing,
+      img: projOne,
       github: "#",
-      demo: "#",
+      demo: "https://canva.link/smart-trading-system",
+    },
+    {
+      title: "Marketing Campaign for Personal Branding Agencies",
+      desc: "A strategic campaign designed to elevate personal branding agencies through compelling messaging and stronger audience engagement.",
+      tags: ["Brand Strategy", "Campaign", "Growth"],
+      img: projTwo,
+      github: "#",
+      demo: "https://canva.link/digital-marketing-campaign",
+    },
+    {
+      title: "Social Media Campaign",
+      desc: "A multi-channel social strategy designed to grow visibility, engagement, and audience connection across platforms.",
+      tags: ["Social Media", "Strategy", "Growth"],
+      img: projThree,
+      github: "#",
+      demo: "https://canva.link/forex-education-strategy",
     },
   ];
   return (
@@ -617,7 +559,7 @@ function Projects() {
                     loading="lazy"
                     width={1200}
                     height={800}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
                 </div>
@@ -638,20 +580,26 @@ function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-5 flex gap-2">
-                    <a
-                      href={p.github}
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border/70 px-3 py-2 text-xs font-semibold transition-colors hover:border-[color:var(--gold)]/40 hover:text-[color:var(--gold)]"
-                    >
-                      <Github className="h-3.5 w-3.5" /> GitHub
-                    </a>
-                    <a
-                      href={p.demo}
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-[image:var(--gradient-gold)] px-3 py-2 text-xs font-semibold text-black transition-transform hover:scale-[1.03]"
-                    >
-                      <ExternalLink className="h-3.5 w-3.5" /> Live Demo
-                    </a>
-                  </div>
+                  {(p.github || p.demo) && (
+                    <div className="mt-5 flex gap-2">
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border/70 px-3 py-2 text-xs font-semibold transition-colors hover:border-[color:var(--gold)]/40 hover:text-[color:var(--gold)]"
+                        >
+                          <Github className="h-3.5 w-3.5" /> GitHub
+                        </a>
+                      )}
+                      {p.demo && (
+                        <a
+                          href={p.demo}
+                          className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-[image:var(--gradient-gold)] px-3 py-2 text-xs font-semibold text-black transition-transform hover:scale-[1.03]"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" /> Live Demo
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </article>
             </Reveal>
@@ -666,14 +614,24 @@ function Projects() {
 
 function Certifications() {
   const certs = [
-    { title: "Product Design Certificate", org: "Design Program", date: "2024", href: "#" },
     {
       title: "COURSERA: Digital Marketing SEO, PPC and Social Media",
       org: "Coursera",
       date: "2024",
       href: "https://www.coursera.org/account/accomplishments/verify/BK99F9F7OG6L",
     },
-    { title: "Future Certifications", org: "Continuous learner", date: "Ongoing", href: "#" },
+    {
+      title: "COURSERA: Social Media and Digital Marketing Fundamentals",
+      org: "Coursera",
+      date: "2024",
+      href: "#",
+    },
+    {
+      title: "COURSERA: Foundations of Digital Marketing and E-commerce",
+      org: "Coursera",
+      date: "2024",
+      href: "#",
+    },
   ];
   return (
     <section id="certifications" className="relative py-28">
@@ -686,20 +644,21 @@ function Certifications() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {certs.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.05}>
-              <div className="glass hover-lift group flex h-full flex-col overflow-hidden rounded-3xl">
-                <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-[color:var(--gold)]/12 via-transparent to-black/40">
+              <div className="glass hover-lift group flex h-full flex-col overflow-hidden rounded-3xl transition-transform duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-[color:var(--gold)]/10 via-transparent to-white/10">
+                  <img
+                    src={i === 0 ? certificate1 : i === 1 ? certificate2 : certificateImg}
+                    alt="Certificate preview"
+                    className="absolute inset-0 h-full w-full object-cover opacity-60"
+                  />
                   <div
                     aria-hidden
-                    className="absolute inset-0 opacity-40"
+                    className="absolute inset-0"
                     style={{
                       backgroundImage:
-                        "radial-gradient(circle at 30% 30%, rgba(212,175,55,0.5), transparent 60%)",
+                        "radial-gradient(circle at 30% 30%, rgba(212,175,55,0.18), transparent 60%)",
                     }}
                   />
-                  <Award className="relative h-14 w-14 text-[color:var(--gold)] transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-x-6 bottom-6 rounded-xl border border-[color:var(--gold)]/25 bg-black/50 px-3 py-2 text-center text-[11px] uppercase tracking-widest text-[color:var(--gold)] backdrop-blur">
-                    Certificate
-                  </div>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-display text-base font-semibold">
@@ -732,38 +691,17 @@ function Experience() {
   const items = [
     {
       icon: GraduationCap,
-      period: "2023 — Present",
-      title: "Studied at Uncommon.org",
-      org: "Uncommon.org",
-      desc: "Skills-based learning program focused on design, digital, and career readiness.",
-    },
-    {
-      icon: GraduationCap,
-      period: "2023 — Present",
-      title: "Self-directed Learning",
-      org: "UI/UX & Digital Marketing",
-      desc: "Continuous, project-based learning across design and growth.",
+      period: "2024",
+      title: "O-Level Certificate",
+      org: "Completed my O-Level studies",
+      desc: "Graduated with my O-Level certificate in 2024.",
     },
     {
       icon: Award,
-      period: "2024",
-      title: "Google Digital Marketing",
-      org: "Certification",
-      desc: "Fundamentals of Digital Marketing — strategy, SEO, content, analytics.",
-    },
-    {
-      icon: Rocket,
-      period: "2024",
-      title: "Forex Trading Bot",
-      org: "Personal Project",
-      desc: "Designed and shipped an MQL5 automated trading strategy.",
-    },
-    {
-      icon: Briefcase,
-      period: "2024 — Present",
-      title: "Freelance Design Work",
-      org: "Independent",
-      desc: "Delivering product and brand design work for real clients.",
+      period: "2026",
+      title: "Student at Uncommon.org",
+      org: "Currently studying",
+      desc: "Pursuing growth and learning as a student at Uncommon.org in 2026.",
     },
   ];
   return (
@@ -815,57 +753,6 @@ function Experience() {
             })}
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------- Resume ---------- */
-
-function Resume() {
-  return (
-    <section id="resume" className="relative py-28">
-      <div className="mx-auto max-w-4xl px-4">
-        <Reveal>
-          <div className="glass relative overflow-hidden rounded-[2rem] p-10 lg:p-14 gold-ring">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-30 blur-3xl"
-              style={{
-                background: "radial-gradient(circle, rgba(212,175,55,0.6), transparent)",
-              }}
-            />
-            <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/30 bg-[color:var(--gold)]/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-[color:var(--gold)]">
-              Resume
-            </span>
-            <h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
-              A snapshot of my <span className="text-gradient-gold">professional story</span>.
-            </h2>
-            <p className="mt-4 max-w-2xl text-muted-foreground">
-              Python & Django developer, product designer, and digital marketing
-              enthusiast. I combine engineering rigor, design sensibility, and
-              growth thinking to build products that are useful, usable, and
-              delightful.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://www.canva.com/design/DAHQFyAq00Q/3I7M7QrHo2BC9Q_wWtLy0w/edit?ui=e30"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-semibold text-black shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
-              >
-                <Download className="h-4 w-4" />
-                Download CV
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/40 px-6 py-3 text-sm font-semibold transition-colors hover:bg-[color:var(--gold)]/10"
-              >
-                Get in touch <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
@@ -1001,8 +888,8 @@ function Footer() {
             </span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            Building modern web apps, user-centered products, and digital
-            solutions that solve real-world problems.
+            Building digital marketing campaigns, user-centered brands, and
+            strategic digital experiences that drive measurable results.
           </p>
         </div>
         <div>
@@ -1107,7 +994,6 @@ function Portfolio() {
         <Projects />
         <Certifications />
         <Experience />
-        <Resume />
         <Contact />
       </main>
       <Footer />
