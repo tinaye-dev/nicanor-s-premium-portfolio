@@ -551,7 +551,7 @@ function Projects() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.05}>
-              <article className="glass hover-lift group flex h-full flex-col overflow-hidden rounded-3xl">
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-[color-mix(in_oklab,var(--card)_55%,transparent)] backdrop-blur-[20px] saturate-[140%] hover-lift">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={p.img}
