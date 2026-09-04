@@ -376,7 +376,7 @@ function About() {
         />
         <div className="flex justify-center">
           <Reveal>
-            <div className="glass w-full max-w-2xl rounded-3xl p-8 text-center lg:p-10">
+            <div className="glass mx-auto w-full max-w-2xl rounded-3xl p-8 text-center lg:p-10">
               <h3 className="font-display text-2xl font-semibold">
                 Hello, I'm <span className="text-gradient-gold">Nicanor</span>.
               </h3>
