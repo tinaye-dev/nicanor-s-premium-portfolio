@@ -366,8 +366,6 @@ function Hero() {
 /* ---------- About ---------- */
 
 function About() {
-  const timeline: Array<{ year: string; title: string; desc?: string }> = [];
-
   return (
     <section id="about" className="relative py-28">
       <div className="mx-auto max-w-6xl px-4">
@@ -376,9 +374,9 @@ function About() {
           title="Crafts meets curiosity"
           desc="A digital marketing specialist obsessed with building thoughtful, useful, beautiful campaigns."
         />
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+        <div className="flex justify-center">
           <Reveal>
-            <div className="glass rounded-3xl p-8 lg:p-10">
+            <div className="glass w-full max-w-2xl rounded-3xl p-8 text-center lg:p-10">
               <h3 className="font-display text-2xl font-semibold">
                 Hello, I'm <span className="text-gradient-gold">Nicanor</span>.
               </h3>
@@ -387,7 +385,7 @@ function About() {
                 presence through content marketing, SEO, social media management, and digital
                 marketing strategies that convert audiences into customers.
               </p>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mt-4 text-center text-muted-foreground">
                 I care deeply about craft, continuous learning, and creating
                 campaigns that feel considered from every angle: strategic, accessible,
                 and results-driven.
@@ -403,27 +401,6 @@ function About() {
                 ))}
               </div>
             </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <ol className="relative border-l border-[color:var(--gold)]/25 pl-6">
-              {timeline.map((t, i) => (
-                <li key={i} className="mb-8 last:mb-0">
-                  <span className="absolute -left-[7px] mt-1.5 grid h-3.5 w-3.5 place-items-center rounded-full bg-[image:var(--gradient-gold)] shadow-[0_0_0_4px_var(--background)]" />
-                  <div className="glass hover-lift rounded-2xl p-5">
-                    <div className="mb-1 text-xs font-semibold uppercase tracking-widest text-[color:var(--gold)]">
-                      {t.year}
-                    </div>
-                    <div className="font-display text-lg font-semibold">
-                      {t.title}
-                    </div>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {t.desc}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
           </Reveal>
         </div>
       </div>
