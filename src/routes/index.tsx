@@ -382,7 +382,7 @@ function About() {
               <h3 className="font-display text-2xl font-semibold">
                 Hello, I'm <span className="text-gradient-gold">Nicanor</span>.
               </h3>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mt-4 text-center text-muted-foreground">
                 I'm a Digital Marketing Specialist who helps businesses grow their online
                 presence through content marketing, SEO, social media management, and digital
                 marketing strategies that convert audiences into customers.
@@ -575,19 +575,19 @@ function Certifications() {
     {
       title: "COURSERA: Digital Marketing SEO, PPC and Social Media",
       org: "Coursera",
-      date: "2024",
+      date: "2026",
       href: "https://www.coursera.org/account/accomplishments/verify/BK99F9F7OG6L",
     },
     {
       title: "COURSERA: Social Media and Digital Marketing Fundamentals",
       org: "Coursera",
-      date: "2024",
+      date: "2026",
       href: "#",
     },
     {
       title: "COURSERA: Foundations of Digital Marketing and E-commerce",
       org: "Coursera",
-      date: "2024",
+      date: "2026",
       href: "#",
     },
   ];
@@ -599,7 +599,7 @@ function Certifications() {
           title="Always learning"
           desc="A growing library of qualifications from trusted programs."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certs.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.05}>
               <div className="glass hover-lift group flex h-full flex-col overflow-hidden rounded-3xl transition-transform duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
