@@ -35,6 +35,7 @@ import projThree from "@/assets/project3.png";
 import certificateImg from "@/assets/certificate.svg";
 import certificate1 from "@/assets/certificate1.png";
 import certificate2 from "@/assets/certificate2.png";
+import certificate3 from "@/assets/certificate3.png";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -306,27 +307,6 @@ function Hero() {
             </a>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="mt-12 grid max-w-lg grid-cols-2 gap-6"
-          >
-            {[
-              { n: 15, s: "+", l: "Projects" },
-              { n: 100, s: "%", l: "Dedication" },
-
-            ].map((s) => (
-              <div key={s.l}>
-                <div className="font-display text-3xl font-bold text-gradient-gold sm:text-4xl">
-                  <Counter to={s.n} suffix={s.s} />
-                </div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
-                  {s.l}
-                </div>
-              </div>
-            ))}
-          </motion.div>
         </div>
 
         {/* Portrait */}
@@ -366,10 +346,6 @@ function Hero() {
                 <div className="text-sm font-semibold">Digital Marketing + Growth Strategy</div>
               </div>
             </div>
-            <div className="glass absolute -right-4 top-8 flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium">
-              <Sparkles className="h-3.5 w-3.5 text-[color:var(--gold)]" />
-              Awwwards-inspired
-            </div>
           </div>
         </motion.div>
       </div>
@@ -390,13 +366,7 @@ function Hero() {
 /* ---------- About ---------- */
 
 function About() {
-  const timeline = [
-    {
-      year: "2024",
-      title: "Digital Marketing & Automation",
-      desc: "Google Digital Marketing certification and Forex trading bot in MQL5.",
-    },
-  ];
+  const timeline: Array<{ year: string; title: string; desc?: string }> = [];
 
   return (
     <section id="about" className="relative py-28">
@@ -465,10 +435,10 @@ function About() {
 
 function Skills() {
   const skills = [
-    { name: "Search Engine Optimization (SEO)", level: 90 },
-    { name: "Social Media Marketing", level: 88 },
-    { name: "Content Marketing", level: 85 },
-    { name: "Google Ads", level: 82 },
+    "Search Engine Optimization (SEO)",
+    "Social Media Marketing",
+    "Content Marketing",
+    "Google Ads",
   ];
   return (
     <section id="skills" className="relative py-28">
@@ -485,23 +455,11 @@ function Skills() {
             and achieve measurable results.
           </p>
         </div>
-        <div className="mx-auto max-w-2xl space-y-6">
-          {skills.map((s, i) => (
-            <Reveal key={s.name} delay={i * 0.05}>
-              <div className="glass rounded-2xl p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-display text-lg font-semibold">{s.name}</h3>
-                  <span className="text-sm font-semibold text-[color:var(--gold)]">{s.level}%</span>
-                </div>
-                <div className="h-2 overflow-hidden rounded-full bg-secondary/70">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${s.level}%` }}
-                    transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
-                    className="h-full rounded-full bg-[image:var(--gradient-gold)]"
-                    style={{ boxShadow: "0 0 20px rgba(212,175,55,0.4)" }}
-                  />
-                </div>
+        <div className="mx-auto max-w-2xl space-y-4">
+          {skills.map((skill, i) => (
+            <Reveal key={skill} delay={i * 0.05}>
+              <div className="glass rounded-2xl p-5">
+                <h3 className="font-display text-lg font-semibold text-center">{skill}</h3>
               </div>
             </Reveal>
           ))}
@@ -647,7 +605,7 @@ function Certifications() {
               <div className="glass hover-lift group flex h-full flex-col overflow-hidden rounded-3xl transition-transform duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-[color:var(--gold)]/10 via-transparent to-white/10">
                   <img
-                    src={i === 0 ? certificate1 : i === 1 ? certificate2 : certificateImg}
+                    src={i === 0 ? certificate1 : i === 1 ? certificate2 : certificate3}
                     alt="Certificate preview"
                     className="absolute inset-0 h-full w-full object-cover opacity-60"
                   />
@@ -728,7 +686,7 @@ function Experience() {
                         left ? "text-right" : "text-left"
                       }`}
                     />
-                    <div className="relative">
+                    <div className="relative col-start-2 min-w-0 sm:col-start-auto">
                       <span className="absolute -left-[26px] top-4 grid h-8 w-8 place-items-center rounded-full border border-[color:var(--gold)]/40 bg-background text-[color:var(--gold)] sm:left-auto sm:-translate-x-1/2 sm:right-full sm:mr-[-14px]">
                         <it.icon className="h-3.5 w-3.5" />
                       </span>
