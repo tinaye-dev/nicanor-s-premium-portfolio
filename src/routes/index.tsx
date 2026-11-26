@@ -5,7 +5,6 @@ import { useRef } from "react";
 import {
   ArrowDown,
   ArrowUp,
-  Code2,
   Megaphone,
   Github,
   ExternalLink,
@@ -24,7 +23,6 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import profileImg from "@/assets/profile.jpg";
 import projPortfolio from "@/assets/project-portfolio.jpg";
 import projMarketing from "@/assets/project-marketing.jpg";
 import projDesign from "@/assets/project-design.jpg";
@@ -241,7 +239,7 @@ function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 lg:grid-cols-[1.15fr_1fr]">
+      <div className="relative mx-auto max-w-6xl px-4">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -308,46 +306,6 @@ function Hero() {
           </motion.div>
 
         </div>
-
-        {/* Portrait */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-md"
-        >
-          <div className="animate-float relative">
-            <div
-              aria-hidden
-              className="absolute -inset-6 rounded-[2.5rem] opacity-70 blur-2xl"
-              style={{
-                background:
-                  "conic-gradient(from 120deg, rgba(212,175,55,0.5), transparent 40%, rgba(212,175,55,0.3) 70%, transparent)",
-              }}
-            />
-            <div className="glass-strong relative overflow-hidden rounded-[2rem] p-2 gold-ring">
-              <img
-                src={profileImg}
-                alt="Portrait of Nicanor Madziko"
-                width={1024}
-                height={1280}
-                className="h-[520px] w-full rounded-[1.6rem] object-cover"
-              />
-              <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-[color:var(--gold)]/20" />
-            </div>
-
-            {/* floating chip */}
-            <div className="glass absolute -bottom-6 -left-6 flex items-center gap-3 rounded-2xl px-4 py-3 shadow-[var(--shadow-elegant)]">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-[color:var(--gold)]/15 text-[color:var(--gold)]">
-                <Code2 className="h-4 w-4" />
-              </span>
-              <div className="text-left">
-                <div className="text-xs text-muted-foreground">Currently</div>
-                <div className="text-sm font-semibold">Digital Marketing + Growth Strategy</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       <div className="mt-16 flex justify-center">
